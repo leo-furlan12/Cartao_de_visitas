@@ -446,7 +446,7 @@ body {
     gap: 20px;
     flex-wrap: wrap;
     width: 100%;
-    height: 8vh;
+    height: auto;
 }
 
 .card-contato{
@@ -560,4 +560,102 @@ body {
 .rodape span {
     color: #ff7a39;            /* Seu laranja neon */
     font-weight: 700;          /* Deixa o seu nome em negrito */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MODO CELULAR (Responsividade)              */
+/* ========================================== */
+@media screen and (max-width: 768px) {
+    
+    /* 1. Arruma o Cabeçalho e o Menu */
+    .cabeçalho {
+        flex-direction: column;
+        padding: 15px 0;
+    }
+    
+    .menu {
+        margin-top: 15px;
+        flex-wrap: wrap; 
+        justify-content: center;
+        gap: 15px;
+    }
+
+    /* 2. Arruma a Home (Sua foto e texto) */
+    .back {
+        flex-direction: column; 
+        text-align: center;     
+        height: auto; 
+        padding: 40px 0;
+    }
+
+    .texto-esquerda1, .foto-direita1 {
+        width: 100%;
+        align-items: center;
+        padding: 0 20px;
+        margin: 0;
+    }
+
+    .texto {
+        justify-content: center;
+    }
+
+    .foto-redonda {
+        width: 280px; 
+        height: 280px;
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+
+    /* 3. Arruma as Skills */
+    .skills {
+        height: auto;
+        padding: 40px 20px;
+        margin-top: 50px;
+    }
+
+    .container-caixa {
+        grid-template-columns: 1fr; /* Coloca 1 caixa por linha */
+        height: auto;
+    }
+
+    /* 4. Arruma a seção Sobre Mim */
+    .container-flex {
+        flex-direction: column; 
+        width: 100%;
+        gap: 30px;
+    }
+
+    .coluna-texto, .coluna-terminal {
+        width: 100%;
+        min-width: 100%;
+        padding: 0 20px;
+        margin: 0;
+        border-left: none; /* Tira a borda no celular */
+    }
+
+    .terminal {
+        margin-right: 0;
+        margin-top: 20px;
+    }
+    
+    /* 5. Garante que os cards de contato caibam */
+    .card-contato {
+        width: 100%; 
+        max-width: 320px;
+        margin-top: 20px;
+    }
 }
