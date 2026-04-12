@@ -39,6 +39,11 @@ body {
     font-family: 'Quicksand', sans-serif;
     color: #ff7a00; 
 }
+
+.item-menu{
+    text-decoration: none;
+}
+
  .menu{
     display: flex;
     gap: 30px;
@@ -66,12 +71,13 @@ body {
 
  .texto-esquerda1{
 
-    width: 50%;
+    width: 40%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     padding-left: 5%;
+    margin-bottom: 5%;
  }
 
  .titulo{
@@ -79,7 +85,7 @@ body {
     font-size: 20px;
     color: #fff;
     display: flex;
-    margin-top: 100px;
+    margin-bottom: 5%;
     
  }
 
@@ -92,7 +98,7 @@ body {
  .texto{
     font-family: 'Quicksand', sans-serif;
     color: #94a3b8;
-    margin-top: 50px;
+    margin-top: 50;
     display: flex;
  }
 
@@ -101,7 +107,7 @@ body {
     justify-content: center;
     align-items: center;
     width: 220px;
-    height: 50px;
+    height: 60px;
     margin-top: 25px;
     background: #ff7a39;
     color: #fff;
@@ -127,6 +133,7 @@ body {
 
  .foto-direita1{
     width: 60%;
+    margin-bottom: 5%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -135,8 +142,8 @@ body {
 
 .foto-redonda{
     
-    width: 300px;
-    height: 300px;
+    width: 500px;
+    height: 500px;
     border-radius: 50%;
     margin-top: 100px; 
     
@@ -151,8 +158,8 @@ body {
         inset 0 0 20px rgba(255, 255, 255, 0.3), 
         /* O BRILHO EXTERNO (Halo de luz) */
         /* Usamos um azul claro/ciano para o brilho ficar igual ao dele */
-        0 0 100px 30px rgba(255, 122, 0, 0.6); 
-
+        0 0 1100px 30px rgb(255, 123, 0); 
+        
     /* 4. Uma borda bem fina e clara para definir o contorno (opcional) */
     border: 2px solid rgba(255, 255, 255, 0.8);
     
@@ -178,7 +185,8 @@ body {
 
 .titulo2{
     font-family: 'Quicksand', sans-serif;
-    margin-bottom: 100px;
+    margin-bottom: 30px;
+    color: #ff7a39;
 }
 
 
@@ -419,4 +427,137 @@ body {
 
 @keyframes pisca {
     50% { opacity: 0; }
+}
+
+
+
+
+.contato2{
+    width: 100%;
+}
+
+.titulo3{
+    background: #ff7a00;
+}
+
+.container-contato{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 8vh;
+}
+
+.card-contato{
+    display: flex;
+    margin-top: 5%;
+     background: radial-gradient(circle at center, rgba(255, 255, 255, 0.05) 0%, rgba(13, 14, 16, 0.9) 100%);
+    background-color: #121417;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    color: #fff;
+    flex-direction: column;
+    width: 240px;
+    height: 230px;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 25px 0;
+    }
+
+
+.conteudo-card{
+    display: flex;
+    flex-grow: 1; /* Faz esta div "engordar" e ocupar todo o espaço vazio do meio */
+    align-items: center; /* Centraliza o texto verticalmente dentro dela */
+    justify-content: center;
+    width: 100%;
+}
+
+.imagem-contato{
+    display: flex;
+    align-items:center;
+    justify-content: flex-start;
+    width: 100%;
+    padding-left: 20px;
+    gap: 15px;
+   
+}
+
+.botao-linkedin{
+    width: 150px;
+    height: 50px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background: #ff7a39;
+    color: #fff;
+    font-family:'Quicksand';
+    border-radius: 5px;
+    font-weight: 700;
+    transition: 0.3s;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(255, 122, 0, 0.3);
+ }
+
+ .botao-linkedin:hover {
+    background: #ff8c55;
+    transform: translateY(4px);
+    box-shadow: 0 0px 20px rgba(255, 122, 0, 0.4);
+    border: 2px solid #ff7a39;
+}
+
+.botao-linkedin a{
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+
+}
+
+
+.texto-email{
+    font-size:14px;      /* Deixa a letra um pouco menor */
+    text-align: center;      /* Centraliza o texto */
+    padding: 0 10px;         /* Dá um espacinho nas laterais */
+    word-break: break-all;   /* Se não couber, ele quebra a palavra na marra */
+    margin: 0;
+}
+
+.titulo-contato{
+    display: flex;
+    justify-content: center;
+    color: #ff7a39;
+    font-family: 'Quicksand', sans-serif;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 5%;
+}
+
+
+
+
+
+
+/* ========================================== */
+/* ESTILOS DO RODAPÉ                          */
+/* ========================================== */
+.rodape {
+    background-color: #121417; /* Mesma cor de fundo dos seus cards */
+    color: #cbd5e1;            /* Cinza clarinho para uma leitura suave */
+    text-align: center;        /* Centraliza o texto perfeitamente */
+    padding: 25px 0;           /* Dá um respiro (espaço) em cima e embaixo */
+    font-family: 'Quicksand', sans-serif; /* Mantém a sua fonte padrão */
+    border-top: 1px solid rgba(255, 255, 255, 0.05); /* Linha sutil de separação */
+    margin-top: 50px;          /* Empurra o rodapé um pouco para baixo das seções */
+}
+
+/* Um charme extra: deixa o seu nome com a sua cor de destaque! */
+.rodape span {
+    color: #ff7a39;            /* Seu laranja neon */
+    font-weight: 700;          /* Deixa o seu nome em negrito */
 }
