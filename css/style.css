@@ -108,14 +108,17 @@ body {
     align-items: center;
     width: 220px;
     height: 60px;
-    margin-top: 25px;
+    
     background: #ff7a39;
     color: #fff;
-    font-family:'Quicksand';
+    font-family: 'Quicksand';
     border-radius: 5px;
     border: 1px solid rgba(255,255,255, 0.9);
     font-weight: 700;
     text-decoration: none;
+    transition: 0.3s;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(255, 122, 0, 0.3);
    
 
     transition: 0.3s;
@@ -129,6 +132,45 @@ body {
     box-shadow: 0 0px 20px rgba(255, 122, 0, 0.4);
     border: 2px solid #ff7a39;
 }
+
+/* Agrupa o currículo e os ícones numa mesma linha */
+.botoes-home {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* O espaço entre os botões */
+    margin-top: 25px; 
+}
+
+/* O formato quadrado dos botões de rede social */
+.botao-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px; 
+    height: 60px;
+    
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px; 
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+/* O tamanho exato do ícone SVG lá dentro */
+.botao-icon img {
+    width: 30px;
+    height: 30px;
+}
+
+/* O mesmo efeito de brilho e pulinho do botão principal */
+.botao-icon:hover {
+    background: rgba(255, 122, 0, 0.1); /* Um laranja beeeem fraquinho no fundo */
+    border: 1px solid #ff7a39;
+    transform: translateY(-4px);
+    box-shadow: 0 0px 20px rgba(255, 122, 0, 0.3);
+}
+
+
+
 
 
  .foto-direita1{
@@ -178,9 +220,9 @@ body {
     flex-direction: column;
     align-items: center;
     color: #fff;
-    height: 100vh;
-    padding: 60px 5%;
-    margin-top: 120px;
+    min-height: auto; 
+    padding: 80px 5%; 
+    margin-top: 50px;
 }
 
 .titulo2{
@@ -195,7 +237,7 @@ body {
     grid-template-columns: repeat(2,1fr);
     gap: 20px;
     width: 100%;
-    height: 70vh;
+    height: auto;
 }
 
 .caixa{
@@ -270,6 +312,133 @@ body {
     font-weight: 700;
 
 }
+
+
+/* SEÇÃO DE PROJETOS     */
+
+
+.container-projetos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 5%;
+}
+
+
+.skills{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 80px 0;
+}
+
+.card-projeto {
+    background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.05) 0%, rgba(13, 14, 16, 0.9) 100%);
+    background-color: #121417;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+}
+
+.card-projeto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(255, 122, 0, 0.15);
+    border: 1px solid rgba(255, 122, 0, 0.3);
+}
+
+.conteudo-projeto h3 {
+    color: #ff7a39;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.conteudo-projeto p {
+    color: #cbd5e1;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+
+.tags-projeto {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+
+.tags-projeto span {
+    background: rgba(255, 122, 0, 0.1);
+    color: #ff7a39;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: bold;
+}
+
+.tags-projeto :hover{
+    background:#f7be89;
+    transition: 0.5s;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(255, 122, 0, 0.15);
+    border: 1px solid rgba(255, 122, 0, 0.3);
+}
+
+
+.botoes-projeto {
+    display: flex;
+    gap: 15px;
+}
+
+.botao-codigo, .botao-demo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: 0.3s;
+    flex: 1; 
+}
+
+.botao-codigo {
+    background: transparent;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.botao-codigo:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: #fff;
+}
+
+.botao-demo {
+    background: #ff7a39;
+    color: #fff;
+}
+
+.botao-demo:hover {
+    background: #ff8c55;
+    box-shadow: 0 0px 15px rgba(255, 122, 0, 0.4);
+}
+
+/*fim projetos*/
+
 
 
 
